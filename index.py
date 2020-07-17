@@ -5,15 +5,35 @@ import os
 # Importacion librerias para Fecha 
 from datetime import date
 from datetime import datetime
+# Libreria de Errores
+import errno
 
 
 
-# Titulo Principal
 ############################################################################################
+#Crear Estructura
+def CrearEsturctura():
+    try:
+        os.mkdir('log')
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise
+
+    try:
+        os.mkdir('backup')
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise
+############################################################################################
+
+############################################################################################
+# Titulo Principal
+
 def TituloPresentacion():
     print('╔══════════════╦══════╦══════════════╗')
     print('║ AGS Server   ║ 1.0  ║ www.Wixan.cl ║')
     print('╚══════════════╩══════╩══════════════╝')
+    CrearEsturctura()
 ############################################################################################
 
 ############################################################################################
@@ -97,6 +117,7 @@ def InstalacionDeComponentes():
     Opciones()
  #   os.system('apt-get install hollywood -y')
 ############################################################################################
+
 
 ############################################################################################
 #Creacion de Un Log
