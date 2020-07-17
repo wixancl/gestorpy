@@ -126,10 +126,10 @@ def CrearLog():
     print('│4  │ Crear log                       │')
     print('└───┴─────────────────────────────────┘')
     
-
+    pathlog = 'log/'
     now = datetime.now()
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
-    archivo = fecha + '.txt'
+    archivo = pathlog + fecha + '.txt'
     print(archivo)
 
     f = open (archivo,'wb')
