@@ -21,7 +21,7 @@ def TituloMenuPrincipal():
     print('├───┼─────────────────────────────────┤')
     print('│2  │ Actualizacion del Sistema       │')
     print('├───┼─────────────────────────────────┤')
-    print('│3  │ Creacion de los Log             │')
+    print('│3  │ Salir                           │')
     print('└───┴─────────────────────────────────┘')
 
 ############################################################################################
@@ -36,13 +36,16 @@ def Opciones():
     
     if opcion == 2:
         ActualizacionDelSistema()
+
+    if opcion == 3:
+        os.system('exit')
 ############################################################################################
 
 ############################################################################################
 #Estados Preliminares
 def EstadosPreliminares():
     print('┌───┬─────────────────────────────────┐')
-    print('│1  │ Estados Preliminares            │')
+    print('│2  │ Actualizacion del Sistema       │')
     print('└───┴─────────────────────────────────┘')
     os.system('ls')
     os.system('pwd')
@@ -52,6 +55,9 @@ def EstadosPreliminares():
 ############################################################################################
 #Actualizacion del sistema
 def ActualizacionDelSistema():
+    print('┌───┬─────────────────────────────────┐')
+    print('│2  │ Estados Preliminares            │')
+    print('└───┴─────────────────────────────────┘')
     os.system('apt-get update')
     os.system('apt-get upgrade')
     os.system('apt-get install nano -y')
