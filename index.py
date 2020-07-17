@@ -108,7 +108,7 @@ def CrearLog():
 
     now = datetime.now()
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
-    achivo = fecha + 'txt'
+    archivo = fecha + 'txt'
     print(archivo)
 
     f = open ('holamundo.txt','wb')
