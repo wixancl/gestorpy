@@ -104,8 +104,13 @@ def CrearLog():
     print('┌───┬─────────────────────────────────┐')
     print('│4  │ Crear log                       │')
     print('└───┴─────────────────────────────────┘')
+    
+
     now = datetime.now()
-    print(now)
+    fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
+    achivo = fecha + 'txt'
+    print(archivo)
+
     f = open ('holamundo.txt','wb')
     f.write('hola mundo')
     f.close()
