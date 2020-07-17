@@ -54,6 +54,7 @@ def EstadosPreliminares():
     print('└───┴─────────────────────────────────┘')
     os.system('ls')
     os.system('pwd')
+    TituloMenuPrincipal()
     Opciones()
 ############################################################################################
 
@@ -65,6 +66,7 @@ def ActualizacionDelSistema():
     print('└───┴─────────────────────────────────┘')
     os.system('apt-get update')
     os.system('apt-get upgrade')
+    TituloMenuPrincipal()
     Opciones()
  #   os.system('apt-get install hollywood -y')
 ############################################################################################
@@ -80,6 +82,7 @@ def InstalacionDeComponentes():
     os.system('apt-get install htop -y')
     os.system('apt-get install bmon -y')
     os.system('apt-get install pdmenu -y')
+    TituloMenuPrincipal()
     Opciones()
  #   os.system('apt-get install hollywood -y')
 ############################################################################################
