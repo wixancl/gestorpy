@@ -108,10 +108,10 @@ def CrearLog():
 
     now = datetime.now()
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
-    archivo = fecha + 'txt'
+    archivo = fecha + '.txt'
     print(archivo)
 
-    f = open ('holamundo.txt','wb')
+    f = open (archivo,'wb')
     f.write('hola mundo')
     f.close()
     
