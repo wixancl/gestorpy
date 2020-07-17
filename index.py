@@ -29,8 +29,12 @@ def TituloMenuPrincipal():
 ############################################################################################
 #Estados Preliminares
 def EstadosPreliminares():
+    print('┌───┬─────────────────────────────────┐')
+    print('│1  │ Estados Preliminares            │')
+    print('└───┴─────────────────────────────────┘')
     os.system('ls')
     os.system('pwd')
+    Opciones()
 ############################################################################################
 
 ############################################################################################
@@ -40,16 +44,29 @@ def ActualizacionDelSistema():
     os.system('apt-get upgrade')
     os.system('apt-get install nano -y')
     os.system('apt-get install mc -y')
-    os.system('apt-get install hollywood -y')
+    os.system('apt-get install htop -y')
+    os.system('apt-get install bmon -y')
+ #   os.system('apt-get install hollywood -y')
 ############################################################################################
+
+############################################################################################
+#Opciones
+def Opciones():
+    opcion = input("Indique su opcion: ")
+
+    if opcion == 1:
+        EstadosPreliminares()
+    
+    if opcion == 2:
+        ActualizacionDelSistema()
+############################################################################################
+
 
 TituloPresentacion()
 TituloMenuPrincipal()
-EstadosPreliminares()
-opcion = input("Indique su opcion: ")
+Opciones()
 
-if opcion == 1:
-    EstadosPreliminares()
-    
-if opcion == 2:
-    ActualizacionDelSistema()
+
+
+
+
