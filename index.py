@@ -1,7 +1,12 @@
 # -*- coding: utf-8 -*-
 
-# Importacion de Librerias
+# Importacion de Librerias sistema Operativo
 import os
+# Importacion librerias para Fecha 
+from datetime import date
+from datetime import datetime
+
+
 
 # Titulo Principal
 ############################################################################################
@@ -99,10 +104,12 @@ def CrearLog():
     print('┌───┬─────────────────────────────────┐')
     print('│4  │ Crear log                       │')
     print('└───┴─────────────────────────────────┘')
-    
+    now = datetime.now()
+    print(now)
     f = open ('holamundo.txt','wb')
     f.write('hola mundo')
     f.close()
+    
     
     TituloMenuPrincipal()
     Opciones()
