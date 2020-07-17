@@ -52,7 +52,7 @@ def EstadosPreliminares():
 ############################################################################################
 #Actualizacion del sistema
 def ActualizacionDelSistema():
-    os.system('apt-et update')
+    os.system('apt-get update')
     os.system('apt-get upgrade')
     os.system('apt-get install nano -y')
     os.system('apt-get install mc -y')
