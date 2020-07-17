@@ -40,7 +40,7 @@ def Opciones():
         ActualizacionDelSistema()
 
     if opcion == 3:
-        InstalacionDeComponentes():
+        InstalacionDeComponentes()
 
     if opcion == 4:
         os.system('Exit')       
