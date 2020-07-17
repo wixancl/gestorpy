@@ -21,7 +21,9 @@ def TituloMenuPrincipal():
     print('├───┼─────────────────────────────────┤')
     print('│2  │ Actualizacion del Sistema       │')
     print('├───┼─────────────────────────────────┤')
-    print('│3  │ Salir                           │')
+    print('│3  │ Instalacion de Componenetes     │')
+    print('├───┼─────────────────────────────────┤')
+    print('│4  │ Salir                           │')
     print('└───┴─────────────────────────────────┘')
 
 ############################################################################################
@@ -45,7 +47,7 @@ def Opciones():
 #Estados Preliminares
 def EstadosPreliminares():
     print('┌───┬─────────────────────────────────┐')
-    print('│2  │ Actualizacion del Sistema       │')
+    print('│1  │ Estados Preliminares            │')
     print('└───┴─────────────────────────────────┘')
     os.system('ls')
     os.system('pwd')
@@ -56,10 +58,20 @@ def EstadosPreliminares():
 #Actualizacion del sistema
 def ActualizacionDelSistema():
     print('┌───┬─────────────────────────────────┐')
-    print('│2  │ Estados Preliminares            │')
+    print('│2  │ Actualizacion del Sistema       │')
     print('└───┴─────────────────────────────────┘')
     os.system('apt-get update')
     os.system('apt-get upgrade')
+    Opciones()
+ #   os.system('apt-get install hollywood -y')
+############################################################################################
+
+############################################################################################
+#Intalacion de Componenetes
+def InstalacionDeComponentes():
+    print('┌───┬─────────────────────────────────┐')
+    print('│3  │ Instalacion de Componenetes     │')
+    print('└───┴─────────────────────────────────┘')
     os.system('apt-get install nano -y')
     os.system('apt-get install mc -y')
     os.system('apt-get install htop -y')
@@ -68,9 +80,6 @@ def ActualizacionDelSistema():
     Opciones()
  #   os.system('apt-get install hollywood -y')
 ############################################################################################
-
-
-
 
 TituloPresentacion()
 TituloMenuPrincipal()
