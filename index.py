@@ -23,7 +23,9 @@ def TituloMenuPrincipal():
     print('├───┼─────────────────────────────────┤')
     print('│3  │ Instalacion de Componenetes     │')
     print('├───┼─────────────────────────────────┤')
-    print('│4  │ Salir                           │')
+    print('│4  │ Crear Log                       │')    
+    print('├───┼─────────────────────────────────┤')
+    print('│5  │ Salir                           │')
     print('└───┴─────────────────────────────────┘')
 
 ############################################################################################
@@ -43,6 +45,9 @@ def Opciones():
         InstalacionDeComponentes()
 
     if opcion == 4:
+        CrearLog()   
+
+    if opcion == 5:
         os.system('Exit')       
 ############################################################################################
 
@@ -81,11 +86,31 @@ def InstalacionDeComponentes():
     os.system('apt-get install mc -y')
     os.system('apt-get install htop -y')
     os.system('apt-get install bmon -y')
+    os.system('apt-get install expect -y')
     os.system('apt-get install pdmenu -y')
     TituloMenuPrincipal()
     Opciones()
  #   os.system('apt-get install hollywood -y')
 ############################################################################################
+
+############################################################################################
+#Creacion de Un Log
+def CrearLog():
+    print('┌───┬─────────────────────────────────┐')
+    print('│4  │ Crear log                       │')
+    print('└───┴─────────────────────────────────┘')
+    
+    f = open ('holamundo.txt','wb')
+    f.write('hola mundo')
+    f.close()
+    
+    TituloMenuPrincipal()
+    Opciones()
+ #   os.system('apt-get install hollywood -y')
+############################################################################################
+
+
+
 
 TituloPresentacion()
 TituloMenuPrincipal()
