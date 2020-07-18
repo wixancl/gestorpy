@@ -35,6 +35,7 @@ def CrearEsturctura():
 ############################################################################################
 #Creacion de Un Log
 def CrearLog(instruccion):    
+    registro = str(instruccion)
     pathlog = 'log/'
     now = datetime.now()
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
@@ -43,20 +44,13 @@ def CrearLog(instruccion):
     f = open ('log.txt','wb')
     f.write('--------------------------------------------------------------------------------')
     f.write('Fecha ' + fecha)
-    f.write(instruccion)
+    f.write(registro)
     f.write('--------------------------------------------------------------------------------')
     f.close()
     
     TituloMenuPrincipal()
     Opciones()
 ############################################################################################
-
-
-
-
-
-
-
 
 ############################################################################################
 # Titulo Principal
