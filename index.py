@@ -104,7 +104,7 @@ def Opciones():
         CrearInforme()   
 
     if opcion == 6:
-        os.system('Exit')       
+        os.system('exit')       
 ############################################################################################
 
 ############################################################################################
@@ -127,10 +127,10 @@ def ActualizacionDelSistema():
     print('┌───┬─────────────────────────────────┐')
     print('│2  │ Actualizacion del Sistema       │')
     print('└───┴─────────────────────────────────┘')
-    #os.system('apt-get update')
-    CrearLog("apt-get update")
-    #os.system('apt-get upgrade')
-    CrearLog("apt-get upgrade")
+    os.system('apt-get update')
+    #CrearLog("apt-get update")
+    os.system('apt-get upgrade')
+    #CrearLog("apt-get upgrade")
     TituloMenuPrincipal()
     Opciones()
 ############################################################################################
