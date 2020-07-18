@@ -24,7 +24,39 @@ def CrearEsturctura():
     except OSError as e:
         if e.errno != errno.EEXIST:
             raise
+
+    try:
+        os.mkdir('inform')
+    except OSError as e:
+        if e.errno != errno.EEXIST:
+            raise           
 ############################################################################################
+
+############################################################################################
+#Creacion de Un Log
+def CrearLog(instruccion):    
+    pathlog = 'log/'
+    now = datetime.now()
+    fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
+    print(archivo)
+
+    f = open ('log.txt','wb')
+    f.write('--------------------------------------------------------------------------------')
+    f.write('Fecha ' + fecha)
+    f.write(instruccion)
+    f.write('--------------------------------------------------------------------------------')
+    f.close()
+    
+    TituloMenuPrincipal()
+    Opciones()
+############################################################################################
+
+
+
+
+
+
+
 
 ############################################################################################
 # Titulo Principal
@@ -50,7 +82,7 @@ def TituloMenuPrincipal():
     print('├───┼─────────────────────────────────┤')
     print('│4  │ Instalacion de Django           │')
     print('├───┼─────────────────────────────────┤')
-    print('│5  │ Crear Log                       │')    
+    print('│5  │ Crear Informe                   │')    
     print('├───┼─────────────────────────────────┤')
     print('│6  │ Salir                           │')
     print('└───┴─────────────────────────────────┘')
@@ -75,7 +107,7 @@ def Opciones():
         InstalacionDeDjango()
 
     if opcion == 5:
-        CrearLog()   
+        CrearInforme()   
 
     if opcion == 6:
         os.system('Exit')       
@@ -102,7 +134,9 @@ def ActualizacionDelSistema():
     print('│2  │ Actualizacion del Sistema       │')
     print('└───┴─────────────────────────────────┘')
     os.system('apt-get update')
+    CrearLog('apt-get update')
     os.system('apt-get upgrade')
+    CrearLog('apt-get upgrade')
     TituloMenuPrincipal()
     Opciones()
  #   os.system('apt-get install hollywood -y')
@@ -145,14 +179,14 @@ def InstalacionDeDjango():
 
 
 ############################################################################################
-#Creacion de Un Log
-def CrearLog():
+#Creacion de un Informe
+def CrearInforme():
     os.system('clear')
     print('┌───┬─────────────────────────────────┐')
-    print('│4  │ Crear log                       │')
+    print('│5  │ Crear Informe                   │')
     print('└───┴─────────────────────────────────┘')
     
-    pathlog = 'log/'
+    pathlog = 'inform/'
     now = datetime.now()
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
     archivo = pathlog + fecha + '.txt'
