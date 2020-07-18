@@ -48,9 +48,11 @@ def TituloMenuPrincipal():
     print('├───┼─────────────────────────────────┤')
     print('│3  │ Instalacion de Componenetes     │')
     print('├───┼─────────────────────────────────┤')
-    print('│4  │ Crear Log                       │')    
+    print('│4  │ Instalacion de Django           │')
     print('├───┼─────────────────────────────────┤')
-    print('│5  │ Salir                           │')
+    print('│5  │ Crear Log                       │')    
+    print('├───┼─────────────────────────────────┤')
+    print('│6  │ Salir                           │')
     print('└───┴─────────────────────────────────┘')
 
 ############################################################################################
@@ -70,9 +72,12 @@ def Opciones():
         InstalacionDeComponentes()
 
     if opcion == 4:
-        CrearLog()   
+        InstalacionDeDjango()
 
     if opcion == 5:
+        CrearLog()   
+
+    if opcion == 6:
         os.system('Exit')       
 ############################################################################################
 
@@ -118,6 +123,21 @@ def InstalacionDeComponentes():
  #   os.system('apt-get install hollywood -y')
 ############################################################################################
 
+############################################################################################
+#Intalacion de Componenetes
+def InstalacionDeDjango():
+    print('┌───┬─────────────────────────────────┐')
+    print('│4  │ Instalacion de Django           │')
+    print('└───┴─────────────────────────────────┘')
+    os.system('apt-get update -y')
+    os.system('apt-get install pip -y')
+    os.system('apt-get python-django -y')
+    os.system('pip3 install django -y')
+    TituloMenuPrincipal()
+    Opciones()
+ #   os.system('apt-get install hollywood -y')
+############################################################################################
+
 
 ############################################################################################
 #Creacion de Un Log
@@ -135,7 +155,6 @@ def CrearLog():
     f = open (archivo,'wb')
     f.write('hola mundo')
     f.close()
-    
     
     TituloMenuPrincipal()
     Opciones()
