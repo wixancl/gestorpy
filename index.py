@@ -84,6 +84,7 @@ def Opciones():
 ############################################################################################
 #Estados Preliminares
 def EstadosPreliminares():
+    os.system('clear')
     print('┌───┬─────────────────────────────────┐')
     print('│1  │ Estados Preliminares            │')
     print('└───┴─────────────────────────────────┘')
@@ -96,6 +97,7 @@ def EstadosPreliminares():
 ############################################################################################
 #Actualizacion del sistema
 def ActualizacionDelSistema():
+    os.system('clear')
     print('┌───┬─────────────────────────────────┐')
     print('│2  │ Actualizacion del Sistema       │')
     print('└───┴─────────────────────────────────┘')
@@ -109,6 +111,7 @@ def ActualizacionDelSistema():
 ############################################################################################
 #Intalacion de Componenetes
 def InstalacionDeComponentes():
+    os.system('clear')
     print('┌───┬─────────────────────────────────┐')
     print('│3  │ Instalacion de Componenetes     │')
     print('└───┴─────────────────────────────────┘')
@@ -126,13 +129,15 @@ def InstalacionDeComponentes():
 ############################################################################################
 #Intalacion de Componenetes
 def InstalacionDeDjango():
+    os.system('clear')
     print('┌───┬─────────────────────────────────┐')
     print('│4  │ Instalacion de Django           │')
     print('└───┴─────────────────────────────────┘')
     os.system('apt-get update -y')
-    os.system('apt-get install pip -y')
+    os.system('apt-get upgrade -y')
     os.system('apt-get python-django -y')
     os.system('pip3 install django -y')
+    os.system('django-admin startproject terminalweb')
     TituloMenuPrincipal()
     Opciones()
  #   os.system('apt-get install hollywood -y')
@@ -142,6 +147,7 @@ def InstalacionDeDjango():
 ############################################################################################
 #Creacion de Un Log
 def CrearLog():
+    os.system('clear')
     print('┌───┬─────────────────────────────────┐')
     print('│4  │ Crear log                       │')
     print('└───┴─────────────────────────────────┘')
