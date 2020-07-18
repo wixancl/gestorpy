@@ -39,12 +39,12 @@ def CrearLog(instruccion):
     pathlog = 'log/'
     now = datetime.now()
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
-    print(archivo)
+    print(registro)
 
     f = open ('log.txt','wb')
     f.write('--------------------------------------------------------------------------------')
     f.write('Fecha ' + fecha)
-    f.write(registro)
+    #f.write(registro)
     f.write('--------------------------------------------------------------------------------')
     f.close()
     
@@ -127,13 +127,12 @@ def ActualizacionDelSistema():
     print('┌───┬─────────────────────────────────┐')
     print('│2  │ Actualizacion del Sistema       │')
     print('└───┴─────────────────────────────────┘')
-    os.system('apt-get update')
+    #os.system('apt-get update')
     CrearLog("apt-get update")
-    os.system('apt-get upgrade')
+    #os.system('apt-get upgrade')
     CrearLog("apt-get upgrade")
     TituloMenuPrincipal()
     Opciones()
- #   os.system('apt-get install hollywood -y')
 ############################################################################################
 
 ############################################################################################
@@ -151,7 +150,6 @@ def InstalacionDeComponentes():
     os.system('apt-get install pdmenu -y')
     TituloMenuPrincipal()
     Opciones()
- #   os.system('apt-get install hollywood -y')
 ############################################################################################
 
 ############################################################################################
@@ -168,7 +166,6 @@ def InstalacionDeDjango():
     os.system('django-admin startproject terminalweb')
     TituloMenuPrincipal()
     Opciones()
- #   os.system('apt-get install hollywood -y')
 ############################################################################################
 
 
@@ -192,7 +189,6 @@ def CrearInforme():
     
     TituloMenuPrincipal()
     Opciones()
- #   os.system('apt-get install hollywood -y')
 ############################################################################################
 
 
