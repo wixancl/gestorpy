@@ -44,7 +44,7 @@ def CrearLog(instruccion):
     f = open ('log.txt','wb')
     f.write('--------------------------------------------------------------------------------')
     f.write('Fecha ' + fecha)
-    #f.write(registro)
+    f.write(registro)
     f.write('--------------------------------------------------------------------------------')
     f.close()
     
