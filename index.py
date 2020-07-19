@@ -29,7 +29,17 @@ def CrearEsturctura():
         os.mkdir('inform')
     except OSError as e:
         if e.errno != errno.EEXIST:
-            raise           
+            raise
+
+    f = open ('log/log.txt','wb')        
+    f.write(os.linesep)
+    f.write('--------------------------------------------------------------------------------'+ os.linesep)
+    f.write('| LOGS de Programa                                                             |'+ os.linesep)
+    f.write('--------------------------------------------------------------------------------'+ os.linesep)
+    f.write(os.linesep)
+    f.close()
+
+
 ############################################################################################
 
 ############################################################################################
@@ -49,7 +59,7 @@ def CrearLog(instruccion):
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
     print(registro)
 
-    f = open ('log/log.txt','wb')
+    f = open ('log/log.txt','wba')
     f.write(os.linesep)
     f.write('--------------------------------------------------------------------------------'+ os.linesep)
     f.write('Fecha ' + fecha + os.linesep)
