@@ -117,9 +117,9 @@ def Opciones():
 #Estados Preliminares
 def EstadosPreliminares():
     os.system('clear')
-    print('┌───┬─────────────────────────────────┐')
-    print('│1  │ Estados Preliminares            │')
-    print('└───┴─────────────────────────────────┘')
+    os.system('echo "\e[92m ┌───┬─────────────────────────────────┐ \e[0m"')
+    os.system('echo "\e[92m │1  │ Estados Preliminares            │ \e[0m"')
+    os.system('echo "\e[92m └───┴─────────────────────────────────┘ \e[0m"')
     os.system('ls')
     os.system('pwd')
     TituloMenuPrincipal()
@@ -130,9 +130,9 @@ def EstadosPreliminares():
 #Actualizacion del sistema
 def ActualizacionDelSistema():
     os.system('clear')
-    print('┌───┬─────────────────────────────────┐')
-    print('│2  │ Actualizacion del Sistema       │')
-    print('└───┴─────────────────────────────────┘')
+    os.system('echo "\e[92m ┌───┬─────────────────────────────────┐ \e[0m"')
+    os.system('echo "\e[92m │2  │ Actualizacion del Sistema       │ \e[0m"')
+    os.system('echo "\e[92m └───┴─────────────────────────────────┘ \e[0m"')
     os.system('apt-get update')
     #CrearLog("apt-get update")
     os.system('apt-get upgrade')
@@ -145,9 +145,9 @@ def ActualizacionDelSistema():
 #Intalacion de Componenetes
 def InstalacionDeComponentes():
     os.system('clear')
-    print('┌───┬─────────────────────────────────┐')
-    print('│3  │ Instalacion de Componenetes     │')
-    print('└───┴─────────────────────────────────┘')
+    os.system('echo "\e[92m ┌───┬─────────────────────────────────┐ \e[0m"')
+    os.system('echo "\e[92m │3  │ Instalacion de Componenetes     │ \e[0m"')
+    os.system('echo "\e[92m └───┴─────────────────────────────────┘ \e[0m"')
     os.system('apt-get install nano -y')
     os.system('apt-get install mc -y')
     os.system('apt-get install htop -y')
@@ -162,9 +162,9 @@ def InstalacionDeComponentes():
 #Intalacion de Componenetes
 def InstalacionDeDjango():
     os.system('clear')
-    print('┌───┬─────────────────────────────────┐')
-    print('│4  │ Instalacion de Django           │')
-    print('└───┴─────────────────────────────────┘')
+    os.system('echo "\e[92m ┌───┬─────────────────────────────────┐ \e[0m"')
+    os.system('echo "\e[92m │4  │ Instalacion de Django           │ \e[0m"')
+    os.system('echo "\e[92m └───┴─────────────────────────────────┘ \e[0m"')
     os.system('apt-get update -y')
     os.system('apt-get upgrade -y')
     os.system('apt-get python-django -y')
@@ -179,9 +179,9 @@ def InstalacionDeDjango():
 #Creacion de un Informe
 def CrearInforme():
     os.system('clear')
-    print('┌───┬─────────────────────────────────┐')
-    print('│5  │ Crear Informe                   │')
-    print('└───┴─────────────────────────────────┘')
+    os.system('echo "\e[92m ┌───┬─────────────────────────────────┐ \e[0m"')
+    os.system('echo "\e[92m │5  │ Crear Informe                   │ \e[0m"')
+    os.system('echo "\e[92m └───┴─────────────────────────────────┘ \e[0m"')
     
     pathlog = 'inform/'
     now = datetime.now()
