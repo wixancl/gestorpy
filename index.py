@@ -52,7 +52,7 @@ def CrearLog(instruccion):
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
     print(registro)
 
-    f = open ('log/log.txt','wba')
+    f = open ('log/log.txt','a')
     f.write(os.linesep)
     f.write('--------------------------------------------------------------------------------'+ os.linesep)
     f.write('Fecha ' + fecha + os.linesep)
