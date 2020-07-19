@@ -50,10 +50,12 @@ def CrearLog(instruccion):
     print(registro)
 
     f = open ('log/log.txt','wb')
+    f.write(os.linesep)
     f.write('--------------------------------------------------------------------------------'+ os.linesep)
     f.write('Fecha ' + fecha + os.linesep)
     f.write(registro + os.linesep)
     f.write('--------------------------------------------------------------------------------'+ os.linesep)
+    f.write(os.linesep)
     f.close()
     
     TituloMenuPrincipal()
@@ -130,7 +132,6 @@ def Opciones():
         ResetPrograma()      
 
     if opcion == 7:
-        os.system('exit')
         os.system('exit')       
 ############################################################################################
 
