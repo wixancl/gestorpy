@@ -49,10 +49,10 @@ def CrearLog(instruccion):
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
     print(registro)
 
-    f = open ('log.txt','wb')
+    f = open ('log/log.txt','wb')
     f.write('--------------------------------------------------------------------------------')
     f.write('Fecha ' + fecha)
-    f.write(registro)
+    f.write(registro + os.linesep)
     f.write('--------------------------------------------------------------------------------')
     f.close()
     
@@ -160,7 +160,7 @@ def ActualizacionDelSistema():
     CrearLog("apt-get update")
     os.system('echo "\e[93m apt-get upgrade \e[0m"')
     os.system('apt-get upgrade')
-    #CrearLog("apt-get upgrade")
+    CrearLog("apt-get upgrade")
     TituloMenuPrincipal()
     Opciones()
 ############################################################################################
