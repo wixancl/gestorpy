@@ -56,9 +56,9 @@ def CrearLog(instruccion):
 # Titulo Principal
 
 def TituloPresentacion():
-    os.system('echo "\e[92m ╔══════════════╦══════╦══════════════╗ \e[0m"')
-    os.system('echo "\e[92m ║ AGS Server   ║ 1.0  ║ www.Wixan.cl ║ \e[0m"')
-    os.system('echo "\e[92m ╚══════════════╩══════╩══════════════╝ \e[0m"')
+    os.system('echo "\e[92m ╔══════════════╦══════╦═════════════════════════════╗ \e[0m"')
+    os.system('echo "\e[92m ║ AGS Server   ║ 1.0  ║ www.Wixan.cl                ║ \e[0m"')
+    os.system('echo "\e[92m ╚══════════════╩══════╩═════════════════════════════╝ \e[0m"')
 
 
     CrearEsturctura()
@@ -67,21 +67,21 @@ def TituloPresentacion():
 ############################################################################################
 # Titulo Principal Menu
 def TituloMenuPrincipal():
-    print('┌─────────────────────────────────────┐')
-    print('│ Menu                                │')
-    print('├───┬─────────────────────────────────┤')
-    print('│1  │ Estados Preliminares            │')
-    print('├───┼─────────────────────────────────┤')
-    print('│2  │ Actualizacion del Sistema       │')
-    print('├───┼─────────────────────────────────┤')
-    print('│3  │ Instalacion de Componenetes     │')
-    print('├───┼─────────────────────────────────┤')
-    print('│4  │ Instalacion de Django           │')
-    print('├───┼─────────────────────────────────┤')
-    print('│5  │ Crear Informe                   │')    
-    print('├───┼─────────────────────────────────┤')
-    print('│6  │ Salir                           │')
-    print('└───┴─────────────────────────────────┘')
+    os.system('echo "\e[92m ┌─────────────────────────────────────┐ \e[0m"')
+    os.system('echo "\e[92m │ Menu                                │ \e[0m"')
+    os.system('echo "\e[92m ├───┬─────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │1  │ Estados Preliminares            │ \e[0m"')
+    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │2  │ Actualizacion del Sistema       │ \e[0m"')
+    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │3  │ Instalacion de Componenetes     │ \e[0m"')
+    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │4  │ Instalacion de Django           │ \e[0m"')
+    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │5  │ Crear Informe                   │ \e[0m"')    
+    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │6  │ Salir                           │ \e[0m"')
+    os.system('echo "\e[92m └───┴─────────────────────────────────┘ \e[0m"')
 
     
 
