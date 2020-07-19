@@ -80,19 +80,18 @@ def TituloMenuPrincipal():
     print('├───┼─────────────────────────────────┤')
     print('│6  │ Salir                           │')
     print('└───┴─────────────────────────────────┘')
-    print('
-            echo "$(tput setaf 3) ############################################################################## $(tput sgr 0) "
-            echo "$(tput setaf 3) #  Linux Server                                                              # $(tput sgr 0) "
-            echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "
-            echo "$(tput setaf 3) #  Septiembre de 2017                                                        # $(tput sgr 0) "
-            echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "
-            echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "
-            echo "$(tput setaf 3) #  Guido Rios Ciaffaroni                                                     # $(tput sgr 0) "
-            echo "$(tput setaf 3) #  guidoriosciaffaroni@gmail.com                                             # $(tput sgr 0) "
-            echo "$(tput setaf 3) #  www.guidorios.cl                                                          # $(tput sgr 0) "
-            echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "
-            echo "$(tput setaf 3) ############################################################################## $(tput sgr 0) "
-        ')
+    print('echo "$(tput setaf 3) ############################################################################## $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) #  Linux Server                                                              # $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) #  Septiembre de 2017                                                        # $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) #  Guido Rios Ciaffaroni                                                     # $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) #  guidoriosciaffaroni@gmail.com                                             # $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) #  www.guidorios.cl                                                          # $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "')
+    print('        echo "$(tput setaf 3) ############################################################################## $(tput sgr 0) "')
+        
 
 
 
