@@ -80,18 +80,10 @@ def TituloMenuPrincipal():
     print('├───┼─────────────────────────────────┤')
     print('│6  │ Salir                           │')
     print('└───┴─────────────────────────────────┘')
-    os.system('echo "$(tput setaf 3) ############################################################################## $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) #  Linux Server                                                              # $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) #  Septiembre de 2017                                                        # $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) #  Guido Rios Ciaffaroni                                                     # $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) #  guidoriosciaffaroni@gmail.com                                             # $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) #  www.guidorios.cl                                                          # $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) #                                                                            # $(tput sgr 0) "')
-    os.system('echo "$(tput setaf 3) ############################################################################## $(tput sgr 0) "')
-        
+    os.system('echo "$(tput setaf 3) ╔══════════════╦══════╦══════════════╗ $(tput sgr 0) "')
+    os.system('echo "$(tput setaf 3) ║ AGS Server   ║ 1.0  ║ www.Wixan.cl ║ $(tput sgr 0) "')
+    os.system('echo "$(tput setaf 3) ╚══════════════╩══════╩══════════════╝ $(tput sgr 0) "')
+    
 
 
 
