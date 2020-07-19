@@ -31,7 +31,7 @@ def CrearEsturctura():
         if e.errno != errno.EEXIST:
             raise
 
-    f = open ('log/log.txt','wb')        
+    f = open ('log/log.txt','wba')        
     f.write(os.linesep)
     f.write('--------------------------------------------------------------------------------'+ os.linesep)
     f.write('| LOGS de Programa                                                             |'+ os.linesep)
