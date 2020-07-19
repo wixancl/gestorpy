@@ -67,21 +67,21 @@ def TituloPresentacion():
 ############################################################################################
 # Titulo Principal Menu
 def TituloMenuPrincipal():
-    os.system('echo "\e[92m ┌─────────────────────────────────────┐ \e[0m"')
-    os.system('echo "\e[92m │ Menu                                │ \e[0m"')
-    os.system('echo "\e[92m ├───┬─────────────────────────────────┤ \e[0m"')
-    os.system('echo "\e[92m │1  │ Estados Preliminares            │ \e[0m"')
-    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
-    os.system('echo "\e[92m │2  │ Actualizacion del Sistema       │ \e[0m"')
-    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
-    os.system('echo "\e[92m │3  │ Instalacion de Componenetes     │ \e[0m"')
-    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
-    os.system('echo "\e[92m │4  │ Instalacion de Django           │ \e[0m"')
-    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
-    os.system('echo "\e[92m │5  │ Crear Informe                   │ \e[0m"')    
-    os.system('echo "\e[92m ├───┼─────────────────────────────────┤ \e[0m"')
-    os.system('echo "\e[92m │6  │ Salir                           │ \e[0m"')
-    os.system('echo "\e[92m └───┴─────────────────────────────────┘ \e[0m"')
+    os.system('echo "\e[92m ┌────────────────────────────────────────────────┐ \e[0m"')
+    os.system('echo "\e[92m │ Menu                                           │ \e[0m"')
+    os.system('echo "\e[92m ├───┬────────────────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │1  │ Estados Preliminares                       │ \e[0m"')
+    os.system('echo "\e[92m ├───┼────────────────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │2  │ Actualizacion del Sistema                  │ \e[0m"')
+    os.system('echo "\e[92m ├───┼────────────────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │3  │ Instalacion de Componenetes                │ \e[0m"')
+    os.system('echo "\e[92m ├───┼────────────────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │4  │ Instalacion de Django                      │ \e[0m"')
+    os.system('echo "\e[92m ├───┼────────────────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │5  │ Crear Informe                              │ \e[0m"')    
+    os.system('echo "\e[92m ├───┼────────────────────────────────────────────┤ \e[0m"')
+    os.system('echo "\e[92m │6  │ Salir                                      │ \e[0m"')
+    os.system('echo "\e[92m └───┴────────────────────────────────────────────┘ \e[0m"')
 
     
 
