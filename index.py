@@ -50,10 +50,10 @@ def CrearLog(instruccion):
     print(registro)
 
     f = open ('log/log.txt','wb')
-    f.write('--------------------------------------------------------------------------------')
-    f.write('Fecha ' + fecha)
+    f.write('--------------------------------------------------------------------------------'+ os.linesep)
+    f.write('Fecha ' + fecha + os.linesep)
     f.write(registro + os.linesep)
-    f.write('--------------------------------------------------------------------------------')
+    f.write('--------------------------------------------------------------------------------'+ os.linesep)
     f.close()
     
     TituloMenuPrincipal()
@@ -130,6 +130,7 @@ def Opciones():
         ResetPrograma()      
 
     if opcion == 7:
+        os.system('exit')
         os.system('exit')       
 ############################################################################################
 
@@ -157,10 +158,10 @@ def ActualizacionDelSistema():
     os.system('echo "\e[94m └───┴─────────────────────────────────┘ \e[0m"')
     os.system('echo "\e[93m apt-get update \e[0m"')
     os.system('apt-get update')
-    CrearLog("apt-get update")
+    #CrearLog("apt-get update")
     os.system('echo "\e[93m apt-get upgrade \e[0m"')
     os.system('apt-get upgrade')
-    CrearLog("apt-get upgrade")
+    #CrearLog("apt-get upgrade")
     TituloMenuPrincipal()
     Opciones()
 ############################################################################################
