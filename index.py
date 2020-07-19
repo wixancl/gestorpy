@@ -80,7 +80,7 @@ def TituloPresentacion():
     os.system('echo "\e[92m ╚═══════════════════════════════════════════════════╝ \e[0m"')    
 
 
-    CrearEsturctura()
+    
 ############################################################################################
 
 ############################################################################################
@@ -103,9 +103,7 @@ def TituloMenuPrincipal():
     os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
     os.system('echo "\e[92m │7  │ Salir                                         │ \e[0m"')
     os.system('echo "\e[92m └───┴───────────────────────────────────────────────┘ \e[0m"')
-
-
-
+    CrearEsturctura()
 ############################################################################################
 
 ############################################################################################
@@ -159,7 +157,7 @@ def ActualizacionDelSistema():
     os.system('echo "\e[94m └───┴─────────────────────────────────┘ \e[0m"')
     os.system('echo "\e[93m apt-get update \e[0m"')
     os.system('apt-get update')
-    #CrearLog("apt-get update")
+    CrearLog("apt-get update")
     os.system('echo "\e[93m apt-get upgrade \e[0m"')
     os.system('apt-get upgrade')
     #CrearLog("apt-get upgrade")
