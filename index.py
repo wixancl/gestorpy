@@ -59,7 +59,7 @@ def TituloPresentacion():
     os.system('echo "$(tput setaf 3) ╔══════════════╦══════╦══════════════╗ $(tput sgr 0) "')
     os.system('echo "$(tput setaf 3) ║ AGS Server   ║ 1.0  ║ www.Wixan.cl ║ $(tput sgr 0) "')
     os.system('echo "$(tput setaf 3) ╚══════════════╩══════╩══════════════╝ $(tput sgr 0) "')
-    os.system('echo -e "\e[92m ################################################# \e[0m"')
+    os.system('echo "\e[92m ╔══════════════╦══════╦══════════════╗ \e[0m"')
 
 
     CrearEsturctura()
