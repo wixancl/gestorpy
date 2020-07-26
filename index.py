@@ -122,7 +122,6 @@ def TituloMenuPrincipal():
 def Opciones():
     opcion = input("Indique su opcion: ")
 	
-
     if opcion == 1:
         EstadosPreliminares()
 
