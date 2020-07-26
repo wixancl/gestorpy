@@ -122,27 +122,27 @@ def TituloMenuPrincipal():
 def Opciones():
     opcion = input("Indique su opcion: ")
 	
-	if opcion == 1:
-		EstadosPreliminares()
 
-	if opcion == 2:
-		ActualizacionDelSistema()
-	        
-	if opcion == 3:
-		InstalacionDeComponentes()
+    if opcion == 1:
+        EstadosPreliminares()
 
-	if opcion == 4:
-		InstalacionDeDjango()
+    if opcion == 2:
+        ActualizacionDelSistema()
 
-	if opcion == 5:
-		CrearInforme()   
+    if opcion == 3:
+        InstalacionDeComponentes()
 
-	if opcion == 6:
-		ResetPrograma()      
+    if opcion == 4:
+        InstalacionDeDjango()
 
-	if opcion == 7:
-		os.system('exit')
-    
+    if opcion == 5:
+        CrearInforme()   
+
+    if opcion == 6:
+        ResetPrograma()      
+
+    if opcion == 7:
+        os.system('exit')       
 
 ############################################################################################
 
