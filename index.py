@@ -249,7 +249,7 @@ def CrearInforme():
 
 aplicacion.directorios()
 aplicacion.configuracion()
-aplicacion.lot('test')
+aplicacion.log('test')
 grafica.titulo()
 grafica.menu()
 
