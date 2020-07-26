@@ -110,7 +110,7 @@ def TituloMenuPrincipal():
 ############################################################################################
 #Opciones
 def Opciones():
-    opcion = input("Indique su opcion: ")
+    opcion = int(input("Indique su opcion: "))
 
     if opcion == 1:
         EstadosPreliminares()
@@ -139,7 +139,7 @@ def Opciones():
     if opcion == 7:
         os.system('exit')       
         break
-        
+
 ############################################################################################
 
 ############################################################################################
