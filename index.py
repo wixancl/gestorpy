@@ -57,20 +57,14 @@ class estructura():
 	    now = datetime.now()
 	    fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
 
-	    f = open ('log/log.txt','a')
-	    f.write(os.linesep)
-	    f.write('--------------------------------------------------------------------------------'+ os.linesep)
-	    f.write('Fecha ' + fecha + os.linesep)
-	    f.write(registro + os.linesep)
-	    f.write('--------------------------------------------------------------------------------'+ os.linesep)
-	    f.write(os.linesep)
-	    f.close()
-
-
-
-
-
-
+	    file = open ('log/log.txt','a')
+	    file.write(os.linesep)
+	    file.write('--------------------------------------------------------------------------------'+ os.linesep)
+	    file.write('Fecha ' + fecha + os.linesep)
+	    file.write(registro + os.linesep)
+	    file.write('--------------------------------------------------------------------------------'+ os.linesep)
+	    file.write(os.linesep)
+	    file.close()
 	   
 ############################################################################################
 
@@ -255,6 +249,7 @@ def CrearInforme():
 
 aplicacion.directorios()
 aplicacion.configuracion()
+aplicacion.lot('test')
 grafica.titulo()
 grafica.menu()
 
