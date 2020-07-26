@@ -78,7 +78,7 @@ def TituloPresentacion():
     os.system('echo "\e[92m ║                                                   ║ \e[0m"')
     os.system('echo "\e[92m ╚═══════════════════════════════════════════════════╝ \e[0m"')    
     CrearEsturctura()
-    break
+    
 
     
 ############################################################################################
@@ -103,7 +103,7 @@ def TituloMenuPrincipal():
     os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
     os.system('echo "\e[92m │7  │ Salir                                         │ \e[0m"')
     os.system('echo "\e[92m └───┴───────────────────────────────────────────────┘ \e[0m"')
-    break
+    
     
 ############################################################################################
 
@@ -114,31 +114,31 @@ def Opciones():
 
     if opcion == 1:
         EstadosPreliminares()
-    	break
+    		break
 
     if opcion == 2:
         ActualizacionDelSistema()
-        break
+        	break
 
     if opcion == 3:
         InstalacionDeComponentes()
-        break
+        	break
 
     if opcion == 4:
         InstalacionDeDjango()
-        break
+        	break
 
     if opcion == 5:
         CrearInforme()   
-        break
+        	break
 
     if opcion == 6:
         ResetPrograma()      
-        break
+        	break
 
     if opcion == 7:
         os.system('exit')       
-        break
+        	break
 
 ############################################################################################
 
