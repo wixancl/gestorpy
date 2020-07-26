@@ -9,7 +9,10 @@ from datetime import datetime
 import errno
 
 ############################################################################################
+# Directorios y Estructura principal
+
 class estructura():
+# Directorios	
 	def directorios(self):
 	    try:
 	        os.mkdir('log')
@@ -29,13 +32,27 @@ class estructura():
 	        if e.errno != errno.EEXIST:
 	            raise
 
+# Crear archivo de configuracion 
+	def configuracion(self):
+	    f = open ('config.txt','wba')
+	    f.write('------------- Archivo de Configuracion -------------'+ os.linesep)
+	    f.write('Estado inicial  = 0'+ os.linesep)
+	    f.close()
+
+#Reset Programa
+	def reset(self):
+	    os.system('clear')
+	    os.system('rm -rf backup/ inform/ log/ terminalweb/')
+	   
 ############################################################################################
 
 
 ############################################################################################
+# Crear Titulos y Menus
+
 class Presentacion():
 	version = 1
-
+# Presentacion
 	def titulo(self):
 	    os.system('echo "\e[92m ╔══════════════╦══════╦═════════════════════════════╗ \e[0m"')
 	    os.system('echo "\e[92m ║ AGS Server   ║ 1.0  ║ www.Wixan.cl                ║ \e[0m"')
@@ -47,7 +64,7 @@ class Presentacion():
 	    os.system('echo "\e[92m ║ Julio 2020                                        ║ \e[0m"')
 	    os.system('echo "\e[92m ║                                                   ║ \e[0m"')
 	    os.system('echo "\e[92m ╚═══════════════════════════════════════════════════╝ \e[0m"')    
-	
+#Menu	
 	def menu(self):
 	    os.system('echo "\e[92m ┌───────────────────────────────────────────────────┐ \e[0m"')
 	    os.system('echo "\e[92m │ Menu                                              │ \e[0m"')
@@ -96,14 +113,29 @@ class Presentacion():
 
 
 
+
 ############################################################################################
-#Reset Programa
-def ResetPrograma():
-    os.system('clear')
-    os.system('rm -rf backup/ inform/ log/ terminalweb/')
-    TituloMenuPrincipal()
-    Opciones()
+aplicacion = estructura()
+archivosdeconfiguracion = configuracion()
+grafica = Presentacion()
+
+
 ############################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ############################################################################################
 #Creacion de Un Log
@@ -121,40 +153,12 @@ def CrearLog(instruccion):
     f.write('--------------------------------------------------------------------------------'+ os.linesep)
     f.write(os.linesep)
     f.close()
-    Opciones()
+   
 ############################################################################################
 
 
 
-#
 
-############################################################################################
-#Opciones
-def Opciones():
-    opcion = input("Indique su opcion: ")
-	
-    if opcion == 1:
-        EstadosPreliminares()
-
-    if opcion == 2:
-        ActualizacionDelSistema()
-
-    if opcion == 3:
-        InstalacionDeComponentes()
-
-    if opcion == 4:
-        InstalacionDeDjango()
-
-    if opcion == 5:
-        CrearInforme()   
-
-    if opcion == 6:
-        ResetPrograma()      
-
-    if opcion == 7:
-        os.system('exit')       
-
-############################################################################################
 
 ############################################################################################
 #Estados Preliminares
@@ -167,8 +171,7 @@ def EstadosPreliminares():
     os.system('ls')
     os.system('echo "\e[93m pwd \e[0m"')
     os.system('pwd')
-    TituloMenuPrincipal()
-    Opciones()
+
 ############################################################################################
 
 ############################################################################################
@@ -184,8 +187,7 @@ def ActualizacionDelSistema():
     os.system('apt-get upgrade')
     CrearLog("apt-get update")
     CrearLog("apt-get upgrade")
-    TituloMenuPrincipal()
-    Opciones()
+
 ############################################################################################
 
 ############################################################################################
@@ -213,8 +215,7 @@ def InstalacionDeComponentes():
     CrearLog("apt-get install bmon -y")
     CrearLog("apt-get install expect -y")
     CrearLog("apt-get install pdmenu -y")
-    TituloMenuPrincipal()
-    Opciones()
+ 
 ############################################################################################
 
 ############################################################################################
@@ -239,8 +240,7 @@ def InstalacionDeDjango():
     CrearLog("apt-get python-django -y")
     CrearLog("pip3 install django -y")
     CrearLog("django-admin startproject terminalweb")
-    TituloMenuPrincipal()
-    Opciones()
+
 ############################################################################################
 
 
@@ -261,14 +261,12 @@ def CrearInforme():
     f.write('hola mundo')
     f.close()
     
-    TituloMenuPrincipal()
-    Opciones()
+ 
 ############################################################################################
 
-aplicacion = estructura()
-aplicacion.directorios()
 
-grafica = Presentacion()
+aplicacion.directorios()
+archivosdeconfiguracion.configuracion()
 grafica.titulo()
 grafica.menu()
 
