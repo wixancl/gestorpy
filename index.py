@@ -264,6 +264,7 @@ class Presentacion():
 
 	    if opcion == 7:
 	        os.system('exit') 
+	        break
 		 
 
 
