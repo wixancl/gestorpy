@@ -260,7 +260,7 @@ def CrearInforme():
 class Presentacion():
 	version = 1
 
-	def titulo():
+	def titulo(self):
 	    os.system('echo "\e[92m ╔══════════════╦══════╦═════════════════════════════╗ \e[0m"')
 	    os.system('echo "\e[92m ║ AGS Server   ║ 1.0  ║ www.Wixan.cl                ║ \e[0m"')
 	    os.system('echo "\e[92m ╚══════════════╩══════╩═════════════════════════════╝ \e[0m"')
