@@ -34,10 +34,10 @@ class estructura():
 
 # Crear archivo de configuracion 
 	def configuracion(self):
-	    f = open ('config.txt','wba')
-	    f.write('------------- Archivo de Configuracion -------------'+ os.linesep)
-	    f.write('Estado inicial  = 0'+ os.linesep)
-	    f.close()
+	    file = open ('config.txt','wb')
+	    file.write('------------- Archivo de Configuracion -------------'+ os.linesep)
+	    file.write('Estado inicial  = 0'+ os.linesep)
+	    file.close()
 
 #Reset Programa
 	def reset(self):
@@ -116,7 +116,6 @@ class Presentacion():
 
 ############################################################################################
 aplicacion = estructura()
-archivosdeconfiguracion = configuracion()
 grafica = Presentacion()
 
 
@@ -266,7 +265,7 @@ def CrearInforme():
 
 
 aplicacion.directorios()
-archivosdeconfiguracion.configuracion()
+aplicacion.configuracion()
 grafica.titulo()
 grafica.menu()
 
