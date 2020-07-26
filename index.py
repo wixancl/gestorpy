@@ -9,24 +9,7 @@ from datetime import datetime
 import errno
 
 
-############################################################################################
-class Presentacion():
-	version = 1
 
-	def Titulo():
-	    os.system('echo "\e[92m ╔══════════════╦══════╦═════════════════════════════╗ \e[0m"')
-	    os.system('echo "\e[92m ║ AGS Server   ║ 1.0  ║ www.Wixan.cl                ║ \e[0m"')
-	    os.system('echo "\e[92m ╚══════════════╩══════╩═════════════════════════════╝ \e[0m"')
-	    os.system('echo "\e[92m  \e[0m"')   
-	    os.system('echo "\e[92m ╔═══════════════════════════════════════════════════╗ \e[0m"')
-	    os.system('echo "\e[92m ║ Linux Server                                      ║ \e[0m"')
-	    os.system('echo "\e[92m ║                                                   ║ \e[0m"')
-	    os.system('echo "\e[92m ║ Julio 2020                                        ║ \e[0m"')
-	    os.system('echo "\e[92m ║                                                   ║ \e[0m"')
-	    os.system('echo "\e[92m ╚═══════════════════════════════════════════════════╝ \e[0m"')    
-	
-
-############################################################################################
 
 
 
@@ -272,9 +255,31 @@ def CrearInforme():
     Opciones()
 ############################################################################################
 
+
+############################################################################################
+class Presentacion():
+	version = 1
+
+	def titulo():
+	    os.system('echo "\e[92m ╔══════════════╦══════╦═════════════════════════════╗ \e[0m"')
+	    os.system('echo "\e[92m ║ AGS Server   ║ 1.0  ║ www.Wixan.cl                ║ \e[0m"')
+	    os.system('echo "\e[92m ╚══════════════╩══════╩═════════════════════════════╝ \e[0m"')
+	    os.system('echo "\e[92m  \e[0m"')   
+	    os.system('echo "\e[92m ╔═══════════════════════════════════════════════════╗ \e[0m"')
+	    os.system('echo "\e[92m ║ Linux Server                                      ║ \e[0m"')
+	    os.system('echo "\e[92m ║                                                   ║ \e[0m"')
+	    os.system('echo "\e[92m ║ Julio 2020                                        ║ \e[0m"')
+	    os.system('echo "\e[92m ║                                                   ║ \e[0m"')
+	    os.system('echo "\e[92m ╚═══════════════════════════════════════════════════╝ \e[0m"')    
+	
+
+############################################################################################
+
 #TituloPresentacion()
 grafica = Presentacion()
-grafica.Titulo()
+grafica.titulo()
+
+
 TituloMenuPrincipal()
 Opciones()
 
