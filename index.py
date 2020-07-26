@@ -40,6 +40,7 @@ def CrearEsturctura():
 def ResetPrograma():
     os.system('clear')
     os.system('rm -rf backup/ inform/ log/ terminalweb/')
+    TituloMenuPrincipal()
     Opciones()
 ############################################################################################
 
@@ -50,7 +51,6 @@ def CrearLog(instruccion):
     pathlog = 'log/'
     now = datetime.now()
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
-    print(registro)
 
     f = open ('log/log.txt','a')
     f.write(os.linesep)
@@ -60,8 +60,6 @@ def CrearLog(instruccion):
     f.write('--------------------------------------------------------------------------------'+ os.linesep)
     f.write(os.linesep)
     f.close()
-    
-    TituloMenuPrincipal()
     Opciones()
 ############################################################################################
 
@@ -80,6 +78,7 @@ def TituloPresentacion():
     os.system('echo "\e[92m ║                                                   ║ \e[0m"')
     os.system('echo "\e[92m ╚═══════════════════════════════════════════════════╝ \e[0m"')    
     CrearEsturctura()
+    break
 
     
 ############################################################################################
@@ -104,6 +103,7 @@ def TituloMenuPrincipal():
     os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
     os.system('echo "\e[92m │7  │ Salir                                         │ \e[0m"')
     os.system('echo "\e[92m └───┴───────────────────────────────────────────────┘ \e[0m"')
+    break
     
 ############################################################################################
 
@@ -234,7 +234,6 @@ def CrearInforme():
     now = datetime.now()
     fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
     archivo = pathlog + fecha + '.txt'
-    print(archivo)
 
     f = open (archivo,'wb')
     f.write('hola mundo')
