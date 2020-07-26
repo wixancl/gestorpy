@@ -2,6 +2,7 @@
 
 # Importacion de Librerias sistema Operativo
 import os
+import os.path as path
 # Importacion librerias para Fecha 
 from datetime import date
 from datetime import datetime
@@ -34,10 +35,14 @@ class estructura():
 
 # Crear archivo de configuracion 
 	def configuracion(self):
-	    file = open ('config.txt','wb')
-	    file.write('------------- Archivo de Configuracion -------------'+ os.linesep)
-	    file.write('Estado inicial  = 0'+ os.linesep)
-	    file.close()
+		if path.exists('config.txt'):
+			os.system('echo "\e[92m El archivo existe \e[0m"')
+
+
+#	    file = open ('config.txt','wb')
+#	    file.write('------------- Archivo de Configuracion -------------'+ os.linesep)
+#	    file.write('Estado inicial  = 0'+ os.linesep)
+#	    file.close()
 
 #Reset Programa
 	def reset(self):
