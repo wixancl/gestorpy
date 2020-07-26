@@ -38,9 +38,8 @@ class estructura():
 		if path.exists('config.txt'):
 			os.system('echo "\e[92m Ya existe un archivo de configuracion \e[0m"')
 		else:
-		    file = open ('config.txt','wb')
+		    file = open ('config.txt','a')
 		    file.write('------------- Archivo de Configuracion -------------\n')
-	    	file.write('Estado inicial  = 0  \n')
 	    	file.close()
 
 #Reset Programa
