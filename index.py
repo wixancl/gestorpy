@@ -11,7 +11,6 @@ import errno
 
 ############################################################################################
 class Presentacion():
-	nombre = ""
 	version = 1
 
 	def Titulo():
@@ -275,6 +274,7 @@ def CrearInforme():
 
 #TituloPresentacion()
 grafica = Presentacion()
+grafica.Titulo()
 TituloMenuPrincipal()
 Opciones()
 
