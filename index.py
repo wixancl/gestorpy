@@ -10,6 +10,16 @@ import errno
 
 
 
+
+
+
+
+
+
+
+
+
+
 ############################################################################################
 #Crear Estructura
 def CrearEsturctura():
@@ -111,31 +121,27 @@ def TituloMenuPrincipal():
 #Opciones
 def Opciones():
     opcion = int(input("Indique su opcion: "))
-    try:
-	    if opcion == 1:
-	        EstadosPreliminares()
-	    		
-	    if opcion == 2:
-	        ActualizacionDelSistema()
+	
+	if opcion == 1:
+		EstadosPreliminares()
+
+	if opcion == 2:
+		ActualizacionDelSistema()
 	        
-	    if opcion == 3:
-	        InstalacionDeComponentes()
+	if opcion == 3:
+		InstalacionDeComponentes()
 
-	    if opcion == 4:
-	        InstalacionDeDjango()
+	if opcion == 4:
+		InstalacionDeDjango()
 
-	    if opcion == 5:
-	        CrearInforme()   
+	if opcion == 5:
+		CrearInforme()   
 
-	    if opcion == 6:
-	        ResetPrograma()      
+	if opcion == 6:
+		ResetPrograma()      
 
-	    if opcion == 7:
-	        os.system('exit')
-	except ValueError:
-		os.system('echo "\e[92m ┌───────────────────────────────────────────────────┐ \e[0m"')
-    	os.system('echo "\e[92m │ Ha ocurrido un erro intente nuevamente            │ \e[0m"')
-    	os.system('echo "\e[92m ├───┬───────────────────────────────────────────────┤ \e[0m"')
+	if opcion == 7:
+		os.system('exit')
     
 
 ############################################################################################
