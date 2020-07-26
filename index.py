@@ -114,24 +114,32 @@ def Opciones():
 
     if opcion == 1:
         EstadosPreliminares()
-    
+    	break
+
     if opcion == 2:
         ActualizacionDelSistema()
+        break
 
     if opcion == 3:
         InstalacionDeComponentes()
+        break
 
     if opcion == 4:
         InstalacionDeDjango()
+        break
 
     if opcion == 5:
         CrearInforme()   
+        break
 
     if opcion == 6:
         ResetPrograma()      
+        break
 
     if opcion == 7:
         os.system('exit')       
+        break
+        
 ############################################################################################
 
 ############################################################################################
