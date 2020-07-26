@@ -36,18 +36,41 @@ class estructura():
 # Crear archivo de configuracion 
 	def configuracion(self):
 		if path.exists('config.txt'):
-			os.system('echo "\e[92m El archivo existe \e[0m"')
-
-
-#	    file = open ('config.txt','wb')
-#	    file.write('------------- Archivo de Configuracion -------------'+ os.linesep)
-#	    file.write('Estado inicial  = 0'+ os.linesep)
-#	    file.close()
+			os.system('echo "\e[92m Ya existe un archivo de configuracion \e[0m"')
+		else:
+		    file = open ('config.txt','wb')
+		    file.write('------------- Archivo de Configuracion -------------'+ os.linesep)
+	    	file.write('Estado inicial  = 0'+ os.linesep)
+	    	file.close()
 
 #Reset Programa
 	def reset(self):
 	    os.system('clear')
-	    os.system('rm -rf backup/ inform/ log/ terminalweb/')
+	    os.system('rm -rf config.txt backup/ inform/ log/ terminalweb/')
+
+
+
+#Creacion de Un Log
+	def log(self,instruccion):    
+	    registro = str(instruccion)
+	    pathlog = 'log/'
+	    now = datetime.now()
+	    fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
+
+	    f = open ('log/log.txt','a')
+	    f.write(os.linesep)
+	    f.write('--------------------------------------------------------------------------------'+ os.linesep)
+	    f.write('Fecha ' + fecha + os.linesep)
+	    f.write(registro + os.linesep)
+	    f.write('--------------------------------------------------------------------------------'+ os.linesep)
+	    f.write(os.linesep)
+	    f.close()
+
+
+
+
+
+
 	   
 ############################################################################################
 
@@ -133,37 +156,6 @@ grafica = Presentacion()
 
 
 
-
-
-
-
-
-
-
-
-############################################################################################
-#Creacion de Un Log
-def CrearLog(instruccion):    
-    registro = str(instruccion)
-    pathlog = 'log/'
-    now = datetime.now()
-    fecha = now.strftime('%Y-%m-%d_%H-%M-%S')
-
-    f = open ('log/log.txt','a')
-    f.write(os.linesep)
-    f.write('--------------------------------------------------------------------------------'+ os.linesep)
-    f.write('Fecha ' + fecha + os.linesep)
-    f.write(registro + os.linesep)
-    f.write('--------------------------------------------------------------------------------'+ os.linesep)
-    f.write(os.linesep)
-    f.close()
-   
-############################################################################################
-
-
-
-
-
 ############################################################################################
 #Estados Preliminares
 def EstadosPreliminares():
@@ -173,7 +165,9 @@ def EstadosPreliminares():
     os.system('echo "\e[94m └───┴─────────────────────────────────┘ \e[0m"')
     os.system('echo "\e[93m ls \e[0m"')
     os.system('ls')
+    aplicacion.log('ls')
     os.system('echo "\e[93m pwd \e[0m"')
+    aplicacion.log('ls')
     os.system('pwd')
 
 ############################################################################################
@@ -189,8 +183,7 @@ def ActualizacionDelSistema():
     os.system('apt-get update')
     os.system('echo "\e[93m apt-get upgrade \e[0m"')
     os.system('apt-get upgrade')
-    CrearLog("apt-get update")
-    CrearLog("apt-get upgrade")
+
 
 ############################################################################################
 
@@ -213,12 +206,7 @@ def InstalacionDeComponentes():
     os.system('apt-get install expect -y')
     os.system('echo "\e[93m apt-get install pdmenu -y \e[0m"')
     os.system('apt-get install pdmenu -y')
-    CrearLog("apt-get install nano -y")
-    CrearLog("apt-get install mc -y")
-    CrearLog("apt-get install htop -y")
-    CrearLog("apt-get install bmon -y")
-    CrearLog("apt-get install expect -y")
-    CrearLog("apt-get install pdmenu -y")
+  
  
 ############################################################################################
 
@@ -239,11 +227,7 @@ def InstalacionDeDjango():
     os.system('pip3 install django -y')
     os.system('echo "\e[93m django-admin startproject terminalweb \e[0m"')
     os.system('django-admin startproject terminalweb')
-    CrearLog("apt-get update -y")
-    CrearLog("apt-get upgrade -y")
-    CrearLog("apt-get python-django -y")
-    CrearLog("pip3 install django -y")
-    CrearLog("django-admin startproject terminalweb")
+
 
 ############################################################################################
 
