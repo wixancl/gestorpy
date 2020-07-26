@@ -8,34 +8,93 @@ from datetime import datetime
 # Libreria de Errores
 import errno
 
+############################################################################################
+class estructura():
+	def directorios(self):
+	    try:
+	        os.mkdir('log')
+	    except OSError as e:
+	        if e.errno != errno.EEXIST:
+	            raise
 
+	    try:
+	        os.mkdir('backup')
+	    except OSError as e:
+	        if e.errno != errno.EEXIST:
+	            raise
 
+	    try:
+	        os.mkdir('inform')
+	    except OSError as e:
+	        if e.errno != errno.EEXIST:
+	            raise
+
+############################################################################################
 
 
 ############################################################################################
-#Crear Estructura
-def CrearEsturctura():
-    try:
-        os.mkdir('log')
-    except OSError as e:
-        if e.errno != errno.EEXIST:
-            raise
+class Presentacion():
+	version = 1
 
-    try:
-        os.mkdir('backup')
-    except OSError as e:
-        if e.errno != errno.EEXIST:
-            raise
+	def titulo(self):
+	    os.system('echo "\e[92m ╔══════════════╦══════╦═════════════════════════════╗ \e[0m"')
+	    os.system('echo "\e[92m ║ AGS Server   ║ 1.0  ║ www.Wixan.cl                ║ \e[0m"')
+	    os.system('echo "\e[92m ╚══════════════╩══════╩═════════════════════════════╝ \e[0m"')
+	    os.system('echo "\e[92m  \e[0m"')   
+	    os.system('echo "\e[92m ╔═══════════════════════════════════════════════════╗ \e[0m"')
+	    os.system('echo "\e[92m ║ Linux Server                                      ║ \e[0m"')
+	    os.system('echo "\e[92m ║                                                   ║ \e[0m"')
+	    os.system('echo "\e[92m ║ Julio 2020                                        ║ \e[0m"')
+	    os.system('echo "\e[92m ║                                                   ║ \e[0m"')
+	    os.system('echo "\e[92m ╚═══════════════════════════════════════════════════╝ \e[0m"')    
+	
+	def menu(self):
+	    os.system('echo "\e[92m ┌───────────────────────────────────────────────────┐ \e[0m"')
+	    os.system('echo "\e[92m │ Menu                                              │ \e[0m"')
+	    os.system('echo "\e[92m ├───┬───────────────────────────────────────────────┤ \e[0m"')
+	    os.system('echo "\e[92m │1  │ Estados Preliminares                          │ \e[0m"')
+	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
+	    os.system('echo "\e[92m │2  │ Actualizacion del Sistema                     │ \e[0m"')
+	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
+	    os.system('echo "\e[92m │3  │ Instalacion de Componenetes                   │ \e[0m"')
+	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
+	    os.system('echo "\e[92m │4  │ Instalacion de Django                         │ \e[0m"')
+	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
+	    os.system('echo "\e[92m │5  │ Crear Informe                                 │ \e[0m"')    
+	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')    
+	    os.system('echo "\e[92m │6  │ Reset Programa (Borrar archivos y Directorios)│ \e[0m"')    
+	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
+	    os.system('echo "\e[92m │7  │ Salir                                         │ \e[0m"')
+	    os.system('echo "\e[92m └───┴───────────────────────────────────────────────┘ \e[0m"')   
 
-    try:
-        os.mkdir('inform')
-    except OSError as e:
-        if e.errno != errno.EEXIST:
-            raise
+	    opcion = input("Indique su opcion: ")
+		
+	    if opcion == 1:
+	        EstadosPreliminares()
 
+	    if opcion == 2:
+	        ActualizacionDelSistema()
 
+	    if opcion == 3:
+	        InstalacionDeComponentes()
 
+	    if opcion == 4:
+	        InstalacionDeDjango()
+
+	    if opcion == 5:
+	        CrearInforme()   
+
+	    if opcion == 6:
+	        ResetPrograma()      
+
+	    if opcion == 7:
+	        os.system('exit') 
+
+		 
 ############################################################################################
+
+
+
 
 ############################################################################################
 #Reset Programa
@@ -206,76 +265,12 @@ def CrearInforme():
     Opciones()
 ############################################################################################
 
+aplicacion = estructura()
+aplicacion.directorios()
 
-############################################################################################
-class Presentacion():
-	version = 1
-
-	def titulo(self):
-	    os.system('echo "\e[92m ╔══════════════╦══════╦═════════════════════════════╗ \e[0m"')
-	    os.system('echo "\e[92m ║ AGS Server   ║ 1.0  ║ www.Wixan.cl                ║ \e[0m"')
-	    os.system('echo "\e[92m ╚══════════════╩══════╩═════════════════════════════╝ \e[0m"')
-	    os.system('echo "\e[92m  \e[0m"')   
-	    os.system('echo "\e[92m ╔═══════════════════════════════════════════════════╗ \e[0m"')
-	    os.system('echo "\e[92m ║ Linux Server                                      ║ \e[0m"')
-	    os.system('echo "\e[92m ║                                                   ║ \e[0m"')
-	    os.system('echo "\e[92m ║ Julio 2020                                        ║ \e[0m"')
-	    os.system('echo "\e[92m ║                                                   ║ \e[0m"')
-	    os.system('echo "\e[92m ╚═══════════════════════════════════════════════════╝ \e[0m"')    
-	
-	def menu(self):
-	    os.system('echo "\e[92m ┌───────────────────────────────────────────────────┐ \e[0m"')
-	    os.system('echo "\e[92m │ Menu                                              │ \e[0m"')
-	    os.system('echo "\e[92m ├───┬───────────────────────────────────────────────┤ \e[0m"')
-	    os.system('echo "\e[92m │1  │ Estados Preliminares                          │ \e[0m"')
-	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
-	    os.system('echo "\e[92m │2  │ Actualizacion del Sistema                     │ \e[0m"')
-	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
-	    os.system('echo "\e[92m │3  │ Instalacion de Componenetes                   │ \e[0m"')
-	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
-	    os.system('echo "\e[92m │4  │ Instalacion de Django                         │ \e[0m"')
-	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
-	    os.system('echo "\e[92m │5  │ Crear Informe                                 │ \e[0m"')    
-	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')    
-	    os.system('echo "\e[92m │6  │ Reset Programa (Borrar archivos y Directorios)│ \e[0m"')    
-	    os.system('echo "\e[92m ├───┼───────────────────────────────────────────────┤ \e[0m"')
-	    os.system('echo "\e[92m │7  │ Salir                                         │ \e[0m"')
-	    os.system('echo "\e[92m └───┴───────────────────────────────────────────────┘ \e[0m"')   
-
-	    opcion = input("Indique su opcion: ")
-		
-	    if opcion == 1:
-	        EstadosPreliminares()
-
-	    if opcion == 2:
-	        ActualizacionDelSistema()
-
-	    if opcion == 3:
-	        InstalacionDeComponentes()
-
-	    if opcion == 4:
-	        InstalacionDeDjango()
-
-	    if opcion == 5:
-	        CrearInforme()   
-
-	    if opcion == 6:
-	        ResetPrograma()      
-
-	    if opcion == 7:
-	        os.system('exit') 
-	    break
-		 
-
-
-############################################################################################
-
-#TituloPresentacion()
 grafica = Presentacion()
 grafica.titulo()
 grafica.menu()
-
-Opciones()
 
 
 
