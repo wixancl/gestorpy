@@ -39,8 +39,8 @@ class estructura():
 			os.system('echo "\e[92m Ya existe un archivo de configuracion \e[0m"')
 		else:
 		    file = open ('config.txt','wb')
-		    file.write('------------- Archivo de Configuracion -------------'+ os.linesep)
-	    	file.write('Estado inicial  = 0'+ os.linesep)
+		    file.write('------------- Archivo de Configuracion -------------\n')
+	    	file.write('Estado inicial  = 0  \n')
 	    	file.close()
 
 #Reset Programa
