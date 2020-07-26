@@ -132,12 +132,11 @@ def Opciones():
 
 	    if opcion == 7:
 	        os.system('exit')
-
 	except:
-		    os.system('echo "\e[92m ┌───────────────────────────────────────────────────┐ \e[0m"')
-    		os.system('echo "\e[92m │ Ha ocurrido un erro intente nuevamente            │ \e[0m"')
-    		os.system('echo "\e[92m ├───┬───────────────────────────────────────────────┤ \e[0m"')
-    		Opciones():
+		os.system('echo "\e[92m ┌───────────────────────────────────────────────────┐ \e[0m"')
+    	os.system('echo "\e[92m │ Ha ocurrido un erro intente nuevamente            │ \e[0m"')
+    	os.system('echo "\e[92m ├───┬───────────────────────────────────────────────┤ \e[0m"')
+    	Opciones():
 
 ############################################################################################
 
